@@ -45,9 +45,10 @@ class TicTacToe
     if !valid_move?(index)
       puts "Invalid input, try again"
       turn
+    else
+      move(index, current_player)
+      display_board
     end
-    move(index, current_player)
-    display_board
   end
 
   def won?
